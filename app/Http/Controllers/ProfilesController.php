@@ -11,7 +11,7 @@ class ProfilesController extends Controller
     {   
         $user = User::findorFail($user);
 
-        return view('home',[
+        return view('profiles.index',[
             'user'=>$user
         ]);
     }
