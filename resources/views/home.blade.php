@@ -14,9 +14,10 @@
                 <div class="pr-4"><strong>1.1M</strong> followers</div>
                 <div class="pr-4"><strong>1</strong> follower</div>
             </div>
-            <div class="pt-4 font-weight-bold">BurnerB</div>
-            <div><a href="https://burnerb.github.io/Portfolio"></a></div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab vel deserunt maiores eius vitae, ipsum quam numquam aut doloribus delectus sint, voluptatem eos sequi esse praesentium itaque molestiae cum.</div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url}}</a></div>
+            
 
            
         </div>
