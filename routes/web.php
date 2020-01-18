@@ -10,10 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Mail\NewUseKaribu;
 
 
 
 Auth::routes();
+
+Route::get('/email',function(){
+    return new NewUseKaribu();
+});
 
 Route::post('follow/{user}','FollowsController@store');
 
