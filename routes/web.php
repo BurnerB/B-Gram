@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Routes need to stay in order,anything with variable should stay at end
 Route::get('/p/create','PostsController@create');
 Route::get('/p/{post}','PostsController@show');
 Route::post('/p','PostsController@store');
