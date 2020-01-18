@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
 Route::post('follow/{user}','FollowsController@store');
 
+
+Route::get('/','PostsController@index');
 //Routes need to stay in order,anything with variable should stay at end
 Route::get('/p/create','PostsController@create');
 Route::get('/p/{post}','PostsController@show');

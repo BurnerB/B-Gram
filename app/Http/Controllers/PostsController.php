@@ -2,7 +2,7 @@
 
 //Posting a pic on Instagram
 namespace App\Http\Controllers;
-
+use App\Post;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -11,6 +11,14 @@ class PostsController extends Controller{
     //  middleware prevent access to this endpoint if not logged in
     public function __construct(){
         $this->middleware('auth');
+    }
+
+    public function index(){
+        $users= auth()->user()->following()->pluck('profiles.user_id');
+
+        $posts=Post::whereIn('user_id',$users)->latest()->get();
+
+        return view('posts.index',compact('posts'));
     }
 
     //allows access from profile to post form
