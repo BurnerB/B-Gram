@@ -21,20 +21,20 @@ class ProfilesController extends Controller
             });
 
             
-        $followersCount = Cache::remember(
-            'count-followers.' . $user->id,
-            now()->addSeconds(30),
-            function() use($user){
-                return $user->profile->followers->count();
-            });
+        // $followersCount = Cache::remember(
+        //     'count-followers.' . $user->id,
+        //     now()->addSeconds(30),
+        //     function() use($user){
+        //         return $user->profile->followers->count();
+        //     });
 
             
-        $followingCount = Cache::remember(
-            'count-followers.' . $user->id,
-            now()->addSeconds(30),
-            function() use($user){
-                return $user->following->count();
-            });
+        // $followingCount = Cache::remember(
+        //     'count-followers.' . $user->id,
+        //     now()->addSeconds(30),
+        //     function() use($user){
+        //         return $user->following->count();
+        //     });
 
         return view('profiles.index',compact('user','follows','postCount','followersCount','followingCount'));
     }
