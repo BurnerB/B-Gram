@@ -36,7 +36,7 @@ class ProfilesController extends Controller
         //         return $user->following->count();
         //     });
 
-        return view('profiles.index',compact('user','follows','postCount','followersCount','followingCount'));
+        return view('profiles.index',compact('user','follows','postCount'));
     }
 
     public function edit(User $user){
