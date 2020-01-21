@@ -37,10 +37,10 @@ class PostsController extends Controller{
         //use php artisan storage:link 
         //create a symbolic link from public/storage to storage/app/public
 
-        $imagePath = request('image')->store('uploads','s3');
+        $imagePath = request('image')->store('uploads','public');
             
         //resize image using intervention and post
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
+        $image = Image::make(public_path("{$imagePath}"))->fit(1200,1200);
         $image->save();
 
         //get post from authenticated user and create
