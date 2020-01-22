@@ -11,8 +11,8 @@ class Profile extends Model
 
     //default image
     public function profileImage(){
-        $imagePath = ($this->image) ? $this->image : 'profile/6s9b2zhXyHKqstZKqqUtBAOn5f49WgPhAUBhcvnN.jpeg';
-        return '/storage/'.$imagePath;
+        $imagePath = ($this->image) ? $this->image : 'https://res.cloudinary.com/burnerb/image/upload/v1579684420/myl5jzry6acold1cg5lw.png';
+        return $imagePath;
     }
 
     public function followers(){

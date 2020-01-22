@@ -28,25 +28,22 @@ class PostsController extends Controller{
 
     public function store(){
     // validate request
+    //image is now instance of uploaded file
         $data= request()->validate([
             'caption'=> 'required',
             'image'=> ['required','image']
         ]);
-
-        //image is now instance of uploaded file
-        //use php artisan storage:link 
-        //create a symbolic link from public/storage to storage/app/public
-
-        $imagePath = request('image')->store('uploads','public');
             
         //resize image using intervention and post
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
-        $image->save();
-
-        //get post from authenticated user and create
+        // $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
+        
+        //Uppload image to cloudinary get back URL
+        $image = \Cloudinary\Uploader::upload(request('image'));
+        
+        //get post from authenticated user and create profile
         auth()->user()->posts()->create([
             'caption'=> $data['caption'],
-            'image' => $imagePath,
+            'image' => $image['secure_url'],
         ]);
 
         //redirect back  to owners profile which now contains post

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6cf877bbedee65ebcebd30834dfd9bf",
+    "content-hash": "609586d0fa13dbed0528177564191db1",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -89,6 +89,58 @@
                 "sdk"
             ],
             "time": "2020-01-21T19:14:39+00:00"
+        },
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "e33619e48ea8fa0350c007d640777091bfa4fdbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/e33619e48ea8fa0350c007d640777091bfa4fdbc",
+                "reference": "e33619e48ea8fa0350c007d640777091bfa4fdbc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2019-11-28T15:57:33+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1164,16 +1216,16 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v2.1.3",
+            "version": "v2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "7fd3dc40684d1d035676cf48a5ecc98dc8ef7089"
+                "reference": "d6b8c40e2cc1102fb7ed40ecf841bd09d712ab67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/7fd3dc40684d1d035676cf48a5ecc98dc8ef7089",
-                "reference": "7fd3dc40684d1d035676cf48a5ecc98dc8ef7089",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/d6b8c40e2cc1102fb7ed40ecf841bd09d712ab67",
+                "reference": "d6b8c40e2cc1102fb7ed40ecf841bd09d712ab67",
                 "shasum": ""
             },
             "require": {
@@ -1223,7 +1275,7 @@
                 "laravel",
                 "monitoring"
             ],
-            "time": "2019-12-19T14:33:58+00:00"
+            "time": "2020-01-21T21:06:27+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -4228,16 +4280,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "c3cb2e85cf65917c50e519d64d879c5634336715"
+                "reference": "37f094775814b68d0c6cc8b8ff3c3be243f20725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/c3cb2e85cf65917c50e519d64d879c5634336715",
-                "reference": "c3cb2e85cf65917c50e519d64d879c5634336715",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/37f094775814b68d0c6cc8b8ff3c3be243f20725",
+                "reference": "37f094775814b68d0c6cc8b8ff3c3be243f20725",
                 "shasum": ""
             },
             "require": {
@@ -4264,7 +4316,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "v2.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -4295,7 +4347,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2020-01-21T07:56:45+00:00"
+            "time": "2020-01-21T17:46:02+00:00"
         },
         {
             "name": "facade/ignition-contracts",
