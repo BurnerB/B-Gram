@@ -59,13 +59,11 @@ class ProfilesController extends Controller
         
 
         if(request('image')){
-            // $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000,1000);
             $image = \Cloudinary\Uploader::upload(request('image'));
 
             $imageArray=['image'=>$image['secure_url']];
         }
 
-        //save image as path
         auth()->user()->profile->update(array_merge(
             $data,
             $imageArray ?? []
