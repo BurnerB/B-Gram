@@ -55,4 +55,11 @@ class PostsController extends Controller{
     public function show(\App\Post $post){
         return view('posts.show',compact('post'));
     }
+
+    public function delete($id){
+        $post=Post::find($id);
+        $post->delete();
+        return redirect('/profile/'. auth()->user()->id)
+            ->with('success','Post deleted successfully');
+    }
 }

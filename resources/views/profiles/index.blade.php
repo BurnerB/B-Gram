@@ -8,6 +8,11 @@
         </div>
     
         <div class="col-9 pt-5">
+        @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
+            @endif
             <div class="d-flex justify-content-between align-items-baseline">
                 <div class="d-flex align-items-center pb-3">
                     <div class="h4">{{ $user->username}}</div>

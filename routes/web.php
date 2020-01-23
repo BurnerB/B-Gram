@@ -27,6 +27,7 @@ Route::get('/','PostsController@index');
 //Routes need to stay in order,anything with variable should stay at end
 Route::get('/p/create','PostsController@create');
 Route::get('/p/{post}','PostsController@show');
+Route::get('/p/delete/{id}',['uses' => 'PostsController@delete', 'as' => 'post.delete']);
 Route::post('/p','PostsController@store');
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');

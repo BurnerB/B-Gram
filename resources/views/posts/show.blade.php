@@ -16,8 +16,11 @@
                         <div class="font-weight-bold">
                             <a href="/profile/{{ $post->user->id}}">
                                 <span>{{ $post->user->username }}</span>
-                            </a>|
-                            <a href="#" class="pd-3">Follow</a>
+                            </a>
+                            
+                            @if(Auth::user()->id === $post->user->profile->user_id )
+                            |<a class="btn btn-danger ml-2" href="{{ route('post.delete',$post->id) }}">Delete Post</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -29,6 +32,7 @@
                             {{ $post->user->username }}
                         </a>
                     </span>
+                    
                     {{ $post->caption }}
                 </p>
             </div>
