@@ -67,11 +67,13 @@
                     </form>                    
                 </div>
             </div>
-            <div style="color:red;" class="pt-5">  
-                <h5>* Please use the following test credentials info for login *</h5>
-                <p>test email:baba@test.com</p>
-                <p>test password:12345678</p>
-                <p>* or you could  register an account*</p>
+            <div style="color:red;" class="pt-5 jumbotron vertical-center">  
+                <h5>* Please use any of the test credentials for login *</h5>
+                <p>test email | test password</p>
+                <p>baba@test.com  | 12345678</p>
+                <p>stevo@test.com | 12345678</p>
+                <p>xyz@test.com | 12345678</p>
+                <h5>* or you could  register an account*</h5>
             </div>
         </div>
     </div>
