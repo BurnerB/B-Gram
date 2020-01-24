@@ -23,7 +23,7 @@ Route::get('/email',function(){
 Route::post('follow/{user}','FollowsController@store');
 
 
-Route::get('/','PostsController@index');
+Route::get('/','PostsController@index')->name('posts.show');
 //Routes need to stay in order,anything with variable should stay at end
 Route::get('/p/create','PostsController@create');
 Route::get('/p/{post}','PostsController@show');

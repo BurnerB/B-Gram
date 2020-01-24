@@ -57,9 +57,12 @@ class PostsController extends Controller{
     }
 
     public function delete($id){
-        $post=Post::find($id);
-        $post->delete();
-        return redirect('/profile/'. auth()->user()->id)
-            ->with('success','Post deleted successfully');
+        // return redirect()->route('products.index')
+
+        //                 ->with('success','Product deleted successfully');
+        dd($id);
+        $id=Post::find($post->id);
+        $id->delete();
+        return redirect('/profile/'. auth()->user()->id);
     }
 }
